@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            background-color: #262626;
+            display: grid;
+            place-items: center;
+            align-items: center;
+            transition: 0.5s ease-in-out;
+            color: white;
+        }
+     
+        button{
+            padding: 10px 20px;
+            background: #e67e22;
+            outline: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.9s;
+            border: none;
+            color: black;
+
+        }
+        button:hover{
+            background-color: blue;
+        }
+        .light-mood{
+            background: white;
+            color: black;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Light Mood / Dark Mood</h1>
+        <button onclick="myFunction()">Toggle</button>
+    </div>
+   <script>
+    function myFunction(){
+        var element = document.body;
+        element.classList.toggle('light-mood');
+    }
+   </script>
+</body>
+</html>
