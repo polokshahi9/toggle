@@ -31,15 +31,17 @@
             margin-top: 20px;
             transition: 0.9s;
             border: none;
-            color: black;
+            color: white;
+            font-weight: bold;
 
         }
         button:hover{
             background-color: blue;
+            transition: ease-in-out 1.5s;
         }
         .light-mood{
             background: white;
-            color: black;
+            color: #e67e22;
         }
         
     </style>
@@ -47,13 +49,15 @@
 <body>
     <div class="main">
         <h1>Light Mood / Dark Mood</h1>
-        <button onclick="myFunction()">Toggle</button>
+        <button id="btn">Toggle</button>
     </div>
    <script>
-    function myFunction(){
-        var element = document.body;
-        element.classList.toggle('light-mood');
-    }
+   let element = document.getElementById("btn");
+   let body = document.body;
+   element.addEventListener('click', function(){
+    body.classList.toggle('light-mood');
+   })
+    
    </script>
 </body>
 </html>
